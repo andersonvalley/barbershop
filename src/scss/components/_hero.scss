@@ -1,0 +1,101 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    @include _768 {
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include _768 {
+      flex-direction: column;
+      margin-top: 90px;
+      .hero__logo {
+        width: 170px;
+      }
+    }
+  }
+  &__text {
+    color: #fff;
+    width: 50%;
+    @include _768 {
+      width: 100%;
+      text-align: center;
+      h1 {
+        line-height: 1.4;
+      }
+      h1:before {
+        display: none;
+      }
+    }
+
+    @include _480 {
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+    }
+
+    @media only screen and (max-height: 430px) {
+      margin-bottom: -90px;
+      h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+
+      p {
+        margin-top: 30px;
+      }
+    }
+
+    h1 {
+      font-size: 6rem;
+      font-weight: 900;
+      line-height: 80px;
+      text-transform: uppercase;
+      position: relative;
+
+      @include _1170 {
+        font-size: 5rem;
+      }
+
+      @include _979 {
+        font-size: 4rem;
+      }
+
+      &::before {
+        content: '';
+        width: 60px;
+        height: 5px;
+        background-color: $green;
+        position: absolute;
+        bottom: -20px;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 20px;
+      font-weight: 300;
+    }
+  }
+}

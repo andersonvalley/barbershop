@@ -1,0 +1,151 @@
+.contacts {
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 4%);
+    padding: 0;
+
+    @include _1170 {
+      width: 95%;
+    }
+
+    @include _979 {
+      flex-direction: column;
+    }
+  }
+
+  &__map {
+    width: 70%;
+
+    ymaps {
+      border-radius: 4px;
+    }
+
+    @include _979 {
+      width: 100%;
+    }
+  }
+
+  &__address {
+    width: 30%;
+    padding: 30px;
+
+    @include _1170 {
+      padding: 30px 15px;
+    }
+
+    @include _979 {
+      width: 100%;
+    }
+  }
+}
+
+.address {
+  &__title {
+    font-size: 3.6rem;
+    margin-bottom: 20px;
+
+    @include _979 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    @include _979 {
+      margin-top: 15px;
+    }
+  }
+
+  &__item {
+    span {
+      font-size: 1.3rem;
+      position: relative;
+      top: -3px;
+    }
+
+    p {
+      margin-top: 8px;
+      color: #202020;
+      font-weight: 300;
+
+      @include _979 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.writeus {
+  margin-top: 40px;
+
+  @include _979 {
+    margin-top: 20px;
+
+    h6 {
+      font-size: 2rem;
+    }
+  }
+
+  h6 {
+    font-size: 3rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-write {
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+    justify-content: space-evenly;
+
+    &:hover {
+      text-shadow: 0 0 10px rgb(255 255 255 / 70%);
+    }
+
+    img {
+      margin-right: 4px;
+    }
+
+    @include _979 {
+      width: 50%;
+      height: 50px;
+      justify-content: center;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .btn-write:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .t {
+    background-color: #41a2df;
+  }
+
+  .w {
+    background-color: #19c258;
+  }
+}

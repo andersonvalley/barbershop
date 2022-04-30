@@ -1,0 +1,43 @@
+.social {
+  text-align: center;
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__links {
+    justify-content: center;
+
+    li {
+      a svg {
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          fill: $green;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  margin: 50px 0;
+
+  @include _600 {
+    li {
+      margin-right: 0;
+    }
+  }
+
+  li {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  li img {
+    border-radius: 15px;
+  }
+}

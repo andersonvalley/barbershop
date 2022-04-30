@@ -1,12 +1,68 @@
-// @import './mixins/font-face';
-// @include font-face('beermoney', '../fonts/beermoney', 400, normal);
+// @import '../../node_modules/animate.css/source/animate';
+// // @import '../../node_modules/swiper/swiper-bundle';
 
-@import 'vars';
-@import 'settings';
-@import './mixins/breakpoint';
-@import './mixins/mini';
-
-@import './mixins/burger';
+@import './common/vars';
+@import './common/settings';
+@import './common/breakpoint';
+@import './common/normalize';
+@import './common/burger';
 
 @import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/price';
+@import './components/preloader';
+@import './components/popup';
+@import './components/partners';
+@import './components/social';
+@import './components/contacts';
+@import './components/slider-interior';
 @import './components/footer';
+
+.title {
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family: 'Proxima Nova', sans-serif;
+  margin-bottom: 12px;
+
+  @include _600 {
+    font-size: 3rem;
+  }
+
+  @include _480 {
+    font-size: 2rem;
+  }
+}
+
+.sub-title {
+  color: $gray;
+  font-weight: 300;
+  font-size: 1.7rem;
+
+  @include _480 {
+    font-size: 1.5rem;
+  }
+}
+
+.message {
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid $green;
+  width: 220px;
+  height: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.267);
+  transition: all 300ms ease-in-out;
+  transform: scale(0);
+}
+
+.message.active {
+  transform: scale(1);
+}

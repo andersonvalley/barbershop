@@ -1,0 +1,60 @@
+.partners {
+  text-align: center;
+  padding: 70px 0;
+
+  @include _600 {
+    .partners__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      li:nth-child(2) {
+        margin: 0;
+      }
+    }
+  }
+
+  h6 {
+    margin: 0 0 60px 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    li:nth-child(2) {
+      margin: 0 90px;
+    }
+
+    li {
+      a {
+        display: block;
+        color: $green;
+        transition: color 200ms ease-in-out;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+
+        &:hover {
+          color: darken($color: $green, $amount: 10);
+        }
+
+        span {
+          display: block;
+          margin-top: 30px;
+        }
+      }
+      img {
+        object-fit: cover;
+        max-width: 100px;
+        max-height: 130px;
+        filter: opacity(0.3);
+        transition: filter 200ms ease-in-out;
+
+        &:hover {
+          filter: opacity(1);
+        }
+      }
+    }
+  }
+}

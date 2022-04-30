@@ -1,0 +1,156 @@
+.popup {
+  background-color: #fff;
+  width: 410px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  border-radius: 25px;
+  opacity: 0;
+  visibility: hidden;
+
+  @include _600 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(2, 2, 2, 0.959);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20;
+
+    @media (max-width: 979px) {
+      top: 15px;
+    }
+  }
+
+  &__content {
+    padding: 25px;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    margin-top: -6px;
+    margin-bottom: 50px;
+  }
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+  overflow: scroll;
+}
+
+.popup.active + .popup__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 15px;
+
+    .valid + label {
+      top: 0;
+      color: $green;
+      z-index: 3;
+
+      &::before {
+        width: 95%;
+        height: 20px;
+        content: '';
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 0px;
+        left: 10%;
+        z-index: -1;
+      }
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid rgb(167, 167, 167);
+      transition: border 200ms ease;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $green;
+      }
+
+      &:focus + label {
+        color: $green;
+        top: 0;
+        z-index: 3;
+
+        &::before {
+          width: 95%;
+          height: 20px;
+          content: '';
+          background-color: rgb(255, 255, 255);
+          position: absolute;
+          top: 0px;
+          left: 10%;
+          z-index: -1;
+        }
+      }
+    }
+
+    label {
+      color: $gray;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 16px;
+      transition: all 200ms ease-in-out;
+    }
+
+    select {
+      padding: 14px 16px 14px 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(167, 167, 167);
+      transition: border 200ms ease;
+      outline: none;
+      cursor: pointer;
+      height: 50px;
+      -webkit-appearance: none;
+
+      &:hover {
+        border: 1px solid $green;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: darken($color: $green, $amount: 5);
+    }
+  }
+}

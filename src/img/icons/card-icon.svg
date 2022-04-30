@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>card-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-959.000000, -226.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="icons" transform="translate(113.000000, 71.000000)">
+                <g id="black" transform="translate(0.000000, 110.000000)">
+                    <g id="mini" transform="translate(586.000000, 42.000000)">
+                        <path d="M282,3 L262,3 C260.896,3 260,3.896 260,5 L260,17 C260,18.104 260.896,19 262,19 L282,19 C283.104,19 284,18.104 284,17 L284,5 C284,3.896 283.104,3 282,3 Z M283,17.4285714 C283,17.744 282.7536,18 282.45,18 L261.55,18 C261.2464,18 261,17.744 261,17.4285714 L261,10 L283,10 L283,17.4285714 Z M283,8 L261,8 L261,4.5 C261,4.224 261.2464,4 261.55,4 L282.45,4 C282.7536,4 283,4.224 283,4.5 L283,8 Z M273,13 L264,13 L264,12 L273,12 L273,13 Z M270,15 L264,15 L264,14 L270,14 L270,15 Z M280,13 L277,13 L277,12 L280,12 L280,13 Z" id="card-icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

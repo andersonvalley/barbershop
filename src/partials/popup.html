@@ -1,0 +1,35 @@
+<div class="popup">
+
+  <div class="popup__close close burger">
+    <div class="burger__item"></div>
+  </div>
+
+  <div class="popup__content">
+    <h3 class="popup__title">Оставьте ваш номер телефона, перезвоним вам через минуту</h3>
+
+    <form action="/" name="popup" class="popup__form form">
+
+      <div class="form__item">
+        <select name="address" id="address">
+          <option value="tulskaya">Тульская</option>
+          <option value="rizskaya">Рижская</option>
+        </select>
+      </div>
+
+      <div class="form__item">
+        <input type="text" name="name" id="name">
+        <label for="name">Ваше имя</label>
+      </div>
+
+      <div class="form__item">
+        <input class="tel" type="tel" name="phone" id="phone" required>
+        <label for="phone">Ваш телефон</label>
+        <span></span>
+      </div>
+
+      <button class="btn form__btn" type="submit">Отправить</button>
+    </form>
+
+  </div>
+</div>
+<div class="popup__overlay"></div>

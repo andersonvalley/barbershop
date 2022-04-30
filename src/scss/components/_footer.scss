@@ -1,0 +1,93 @@
+.footer {
+  border-top: 1px solid rgb(236, 236, 236);
+  padding: 20px 40px;
+
+  @include _1170 {
+    padding: 20px 10px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      margin-right: 40px;
+    }
+  }
+
+  @include _1170 {
+    .footer__menu li a {
+      font-size: 1.6rem;
+    }
+
+    .footer__btn {
+      padding: 7px;
+    }
+
+    .footer {
+      padding: 20px 10px;
+    }
+  }
+
+  @include _979 {
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    .footer__menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+
+      li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include _480 {
+    .footer__menu {
+      margin-right: 0;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    margin-right: 0;
+
+    li {
+      margin-right: 25px;
+
+      a {
+        font-size: 2rem;
+        font-weight: 300;
+        background: linear-gradient(to right, rgb(13, 146, 113), $green 50%, rgb(58, 58, 58) 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    color: #000;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

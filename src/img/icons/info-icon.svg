@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>info-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1055.000000, -227.000000)" fill="#C7A081">
+            <g id="icons" transform="translate(113.000000, 71.000000)">
+                <g id="black" transform="translate(0.000000, 110.000000)">
+                    <g id="mini" transform="translate(586.000000, 42.000000)">
+                        <path d="M373,16.3492569 L363.791667,16.3492569 L358.833333,20 L358.833333,16.3492569 L356,16.3492569 L356,4 L373,4 L373,16.3492569 Z M371.583333,5.45447934 L357.416667,5.45447934 L357.416667,14.8947775 L360.25,14.8947775 L360.25,17.1674015 L363.336208,14.8947775 L371.583333,14.8947775 L371.583333,5.45447934 Z M365.208333,9.81864461 L365.208333,13.454843 L363.791667,13.454843 L363.791667,9.81864461 L365.208333,9.81864461 Z M364.5,8.7277851 C364.98875,8.7277851 365.385417,8.32053088 365.385417,7.81873551 C365.385417,7.31694014 364.98875,6.90968592 364.5,6.90968592 C364.01125,6.90968592 363.614583,7.31694014 363.614583,7.81873551 C363.614583,8.32053088 364.01125,8.7277851 364.5,8.7277851 Z" id="info-icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

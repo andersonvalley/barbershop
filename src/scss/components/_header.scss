@@ -1,0 +1,460 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #231f20;
+  padding: 10px 0;
+  transition: all 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 8;
+
+  &.header-hidden {
+    transform: translateX(-1000px);
+    width: 100%;
+  }
+
+  &.header-hidden + .burger {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.header-hidden.header-in-hero {
+    transform: translateX(0);
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    margin-top: 40px;
+    z-index: 8;
+
+    @include _768 {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .header__logo,
+    .header__covid {
+      display: none;
+    }
+
+    .header__phone {
+      @include _600 {
+        display: none;
+      }
+    }
+
+    .header__container {
+      display: block;
+      width: 58%;
+      @include _1170 {
+        width: 59%;
+      }
+    }
+
+    .container {
+      margin: 0 0;
+    }
+
+    .header__inner {
+      justify-content: space-between;
+
+      @media only screen and (max-height: 430px) {
+        margin-top: -20px;
+
+        .header__phone {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .header__btn {
+      margin-top: -70px;
+    }
+
+    .header__points-list {
+      left: 130px;
+      top: -29px;
+    }
+
+    .header__phone {
+      margin-top: 20px;
+    }
+  }
+
+  &.header-hidden.header-in-hero + .burger {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 50px;
+
+    @media only screen and (max-height: 430px) {
+      top: 25px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__phone {
+    font-weight: 200;
+    font-size: 1.8rem;
+    transition: color 200ms ease-in-out;
+    background: linear-gradient(to right, rgb(23, 177, 138), $green 50%, rgb(255, 255, 255) 50%);
+    display: inline-block;
+    overflow: hidden;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+
+    &-black {
+      background: linear-gradient(to right, rgb(23, 177, 138), $green 50%, rgb(0, 0, 0) 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+    }
+
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
+
+  &__phone-icon {
+    display: none;
+  }
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__btn {
+    margin-right: 130px;
+    @include _979 {
+      display: none;
+    }
+  }
+
+  &__covid {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    color: #fff;
+
+    @include _1170 {
+      p {
+        display: none;
+      }
+    }
+
+    @include _979 {
+      img {
+        margin-right: 40px;
+      }
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  &__points {
+    position: relative;
+    padding: 13px 40px 13px 10px;
+    background-color: transparent;
+    border: 2px solid $green;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    @include _480 {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $green;
+    }
+
+    &::after {
+      content: '▼';
+      font-size: 1.2rem;
+      position: absolute;
+      right: 13px;
+      top: 14px;
+      z-index: 5;
+      color: #fff;
+      pointer-events: none;
+    }
+  }
+  &__points-list {
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px 15px;
+    position: absolute;
+    left: 30px;
+    top: 40px;
+    color: #494949;
+    box-shadow: 0 0 15px 0 rgba(49, 49, 49, 0.822);
+
+    li {
+      margin: 4px;
+      cursor: pointer;
+      padding: 3px;
+      position: relative;
+      z-index: 11;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__points-list.active {
+    transform: scale(1);
+  }
+}
+
+.header__phone {
+  @include _600 {
+    span {
+      display: none;
+    }
+    img {
+      display: block;
+    }
+  }
+}
+
+.btn {
+  padding: 13px 22px 12px;
+  background-color: $green;
+  border: 2px solid $green;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.burger {
+  position: fixed;
+  width: 40px;
+  height: 50px;
+  right: 75px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 200ms ease-in-out;
+
+  @include _979 {
+    top: 7px;
+    right: 30px;
+  }
+
+  @include _480 {
+    top: 6px;
+  }
+
+  &:hover &__item,
+  &:hover &__item::before,
+  &:hover &__item::after {
+    background-color: darken($color: $green, $amount: 10);
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: $green;
+    border-radius: 5px;
+    transition: transform 200ms ease;
+    pointer-events: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      height: 4px;
+      background-color: $green;
+      border-radius: 5px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      width: 100%;
+      height: 4px;
+      background-color: $green;
+      border-radius: 5px;
+    }
+  }
+}
+
+.burger.close {
+  .burger {
+    &__item {
+      transform: rotate(-45deg);
+      &:after {
+        transform: rotate(90deg);
+        top: 0;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  transform: translateX(5000px);
+
+  transition: transform 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(12, 12, 12);
+  z-index: 9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media only screen and (max-height: 600px) {
+    .menu__list {
+      justify-content: center;
+      li a {
+        font-size: 3rem;
+      }
+
+      li button {
+        margin-top: 10px;
+      }
+
+      li .menu__social {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-height: 400px) {
+    .menu__list {
+      justify-content: center;
+      li a {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include _768 {
+    justify-content: center;
+
+    ul li a {
+      font-size: 3rem;
+    }
+  }
+
+  &__list {
+    margin-right: 150px;
+
+    @include _480 {
+      margin-right: 50px;
+    }
+
+    li {
+      a {
+        font-size: 5rem;
+        font-weight: 900;
+        background: linear-gradient(
+          to right,
+          rgb(13, 146, 113),
+          $green 50%,
+          rgb(255, 255, 255) 50%
+        );
+        display: inline-block;
+        overflow: hidden;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+
+        &:hover {
+          background-position: 0 100%;
+        }
+      }
+
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: baseline;
+    margin-top: 20px;
+
+    li:first-child {
+      position: relative;
+      top: 5px;
+    }
+
+    li {
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        transition: all 200ms ease-in-out;
+      }
+
+      &:hover {
+        a svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.menu.active {
+  transform: translateX(0);
+}
