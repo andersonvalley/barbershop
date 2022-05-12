@@ -93,11 +93,28 @@
 .about__container {
   padding-bottom: 60px;
 
+  @include _480 {
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+
   p {
     max-width: 35%;
     margin-left: 40px;
     font-size: 1.4rem;
     text-align: left;
+
+    @include _768 {
+      max-width: 55%;
+    }
+
+    @include _480 {
+      margin-left: 0;
+      max-width: 100%;
+    }
   }
 
   .title {

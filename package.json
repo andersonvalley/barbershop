@@ -1,5 +1,5 @@
 {
-  "name": "gulp-test",
+  "name": "gulp",
   "version": "1",
   "main": "gulpfile.js",
   "scripts": {
