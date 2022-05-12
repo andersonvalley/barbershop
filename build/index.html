@@ -112,8 +112,9 @@
 
   <main class="main">
     <div class="hero">
-  <video class="hero__video" src="barbershop-video-bg.mp4" poster="img/barbershop.jpeg" autoplay muted loop
-    playsinline></video>
+  <video class="hero__video" src="barbershop-video-bg.mp4" poster="img/barbershop.jpeg" autoplay muted loop playsinline>
+    <source src="barbershop-video-bg.mp4" type="video/mp4">
+  </video>
 
   <div class="hero__info">
     <div class="hero__logo wow animate__animated animate__slideInLeft">
@@ -490,6 +491,49 @@
     </ul>
   </div>
 </section>
+    <section class="interior">
+  <h5 class="title interior__title">Наш интерьер</h5>
+
+  <div class="swiper interior__slider">
+
+    <div class="swiper-wrapper interior__wrapper">
+      <div class="swiper-slide interior__slide">
+        <picture>
+          <source type="image/webp" srcset="img/t1.webp" data-srcset="img/t1.webp" />
+          <img class="lazy" src="img/t1.jpeg" data-src="img/t1.jpeg" alt="interior" />
+        </picture>
+      </div>
+      <div class="swiper-slide interior__slide">
+        <picture>
+          <source type="image/webp" srcset="img/1x1.webp" data-srcset="img/t2.webp" />
+          <img class="lazy" src="img/1x1.webp" data-src="img/t2.jpeg" alt="interior" />
+        </picture>
+      </div>
+      <div class="swiper-slide interior__slide">
+        <picture>
+          <source type="image/webp" srcset="img/1x1.webp" data-srcset="img/t3.webp" />
+          <img class="lazy" src="img/1x1.webp" data-src="img/t3.jpeg" alt="interior" />
+        </picture>
+      </div>
+      <div class="swiper-slide interior__slide">
+        <picture>
+          <source type="image/webp" srcset="img/1x1.webp" data-srcset="img/t4.webp" />
+          <img class="lazy" src="img/1x1.webp" data-src="img/t4.jpeg" alt="interior" />
+        </picture>
+      </div>
+      <div class="swiper-slide interior__slide">
+        <picture>
+          <source type="image/webp" srcset="img/1x1.webp" data-srcset="img/t5.webp" />
+          <img class="lazy" src="img/1x1.webp" data-src="img/t5.jpeg" alt="interior" />
+        </picture>
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+</section>
     <section class="contacts" id="contacts">
   <div class="container contacts__container">
     <div class="contacts__map map"></div>
@@ -531,21 +575,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-    <section class="interior">
-  <div class="swiper">
-
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide">
-
-      </div>
-
-    </div>
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
 </section>
     <div class="preloader">
@@ -616,6 +645,7 @@
     </button>
   </div>
 </footer>
+
   <script defer src="js/main.js"></script>
 </body>
 
