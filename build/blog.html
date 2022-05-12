@@ -1,4 +1,20 @@
-<header class="header" id="top">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header" id="top">
   <div class="container header__container">
     <div class="header__inner">
       <a class="header__logo" href="#top">
@@ -37,9 +53,12 @@
 
 <nav class="menu" data-link="true">
   <ul class="menu__list">
-    <li><a href="#aboutus" data-link="true">О нас</a></li>
+    <li><a href="#aboutus" data-link="true">О нас</a></li>
     <li><a href="#price" data-link="true">Цены</a></li>
-    <li><a href="#certificate" data-link="true">Сертификат</a></li>
+    <li><a href="blog.html" data-link="true">Блог</a></li>
+    <li><a href="#" data-link="true">Сертификат</a></li>
+    <li><a href="#" data-link="true">Франшиза</a></li>
+    <li><a href="#" data-link="true">Дисконт</a></li>
     <li><a href="#contacts" data-link="true">Контакты</a></li>
     <li><button class="btn menu__btn order">Онлайн запись</button></li>
     <li>
@@ -90,3 +109,137 @@
     </li>
   </ul>
 </nav>
+
+  <main class="main">
+    <div class="hero">
+  <video class="hero__video" src="barbershop-video-bg.mp4" poster="img/barbershop.jpeg" autoplay muted loop playsinline>
+    <source src="barbershop-video-bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero__info">
+    <div class="hero__logo wow animate__animated animate__slideInLeft">
+      <img src="img/logo.svg" width="220" height="220" alt="logo barbershop" />
+    </div>
+
+    <div class="hero__text wow animate__animated animate__slideInRight">
+      <h1>Кем видят тебя сегодня?</h1>
+      <p>Благодаря нам, люди увидят тебя другим!</p>
+    </div>
+  </div>
+</div>
+    <section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <div class="contacts__map map"></div>
+    <div class="contacts__address address">
+      <h6 class="address__title">Контакты</h6>
+      <p>Адреса</p>
+      <ul class="address__list">
+        <li class="address__item">
+          <img src="img/icons/metro.svg" alt="metro">
+          <span>Тульская</span>
+          <p>Новодониловская набережная, д. 10</p>
+        </li>
+        <li class="address__item">
+          <img src="img/icons/metro.svg" alt="metro">
+          <span>Рижская</span>
+          <p>ул. Трифоновская, д. 11, к.1</p>
+        </li>
+      </ul>
+      <p>Телефон</p>
+      <a class="header__phone header__phone-black" href="tel:84951892343">
+        <span>8 495 189-23-43</span>
+      </a>
+      <p>E-mail</p>
+      <a class="sub-title" href="mailto:hello@barbershop.ru">hello@barbershop.ru</a>
+      <p>Часы работы</p>
+      <span class="sub-title">Будни: с 10:00 до 22:00, <br> Выходные: с 10:00 до 22:00</span>
+
+      <div class="writeus">
+        <h6 class="address__title">Пишите нам</h6>
+        <div class="writeus__btns">
+          <button class="btn-reset btn-write t">
+            <img src="img/telegram-icon.svg" alt="t">
+            Telegram
+          </button>
+          <button class="btn-reset btn-write w">
+            <img src="img/WA_Logo.svg" alt="w">
+            WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="preloader">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+    <div class="double-bounce3"></div>
+  </div>
+</div>
+    <div class="popup">
+
+  <div class="popup__close close burger">
+    <div class="burger__item"></div>
+  </div>
+
+  <div class="popup__content">
+    <h3 class="popup__title">Оставьте ваш номер телефона, перезвоним вам через минуту</h3>
+
+    <form action="/" name="popup" class="popup__form form">
+
+      <div class="form__item">
+        <select name="address" id="address">
+          <option value="tulskaya">Тульская</option>
+          <option value="rizskaya">Рижская</option>
+        </select>
+      </div>
+
+      <div class="form__item">
+        <input type="text" name="name" id="name">
+        <label for="name">Ваше имя</label>
+      </div>
+
+      <div class="form__item">
+        <input class="tel" type="tel" name="phone" id="phone" required>
+        <label for="phone">Ваш телефон</label>
+        <span></span>
+      </div>
+
+      <button class="btn form__btn" type="submit">Отправить</button>
+    </form>
+
+  </div>
+</div>
+<div class="popup__overlay"></div>
+
+    <div class="message"></div>
+  </main>
+
+  <footer class="footer">
+  <div class="footer__container">
+    <a href="#top" data-link="true">
+      <img class="wow animate__animated animate__slideInLeft" src="img/logo-black.svg" width="40" height="40"
+        alt="logo barberahop" />
+    </a>
+
+    <ul class="menu__list footer__menu">
+      <li><a data-link="true" href="#aboutus">О нас</a></li>
+      <li><a data-link="true" href="#price">Цены</a></li>
+      <li><a data-link="true" href="blog.html">Блог</a></li>
+      <li><a data-link="true" href="#">Сертификат</a></li>
+      <li><a data-link="true" href="#">Франшиза</a></li>
+      <li><a data-link="true" href="#">Дисконт</a></li>
+      <li><a data-link="true" href="#contacts">Контакты</a></li>
+    </ul>
+
+    <button class="btn menu__btn order footer__btn wow animate__animated animate__slideInRight">
+      Онлайн запись
+    </button>
+  </div>
+</footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+.cert {
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include _979 {
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .sub-title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    width: 40%;
+
+    @include _979 {
+      width: 100%;
+    }
+
+    .price__price {
+      @include _480 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      margin-left: 60px;
+      width: 500px;
+
+      @include _768 {
+        margin-left: 0;
+        width: 350px;
+      }
+
+      @include _480 {
+        margin-top: 30px;
+        width: 300px;
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    border: 2px solid #c7a081;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+    justify-content: space-evenly;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: #c7a081;
+      color: #fff;
+    }
+  }
+}

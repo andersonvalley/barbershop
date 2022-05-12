@@ -985,6 +985,18 @@ template {
   margin-bottom: 10px;
 }
 
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .about__numbers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1053,6 +1065,25 @@ template {
   background-color: #8a8a8a;
   height: 100%;
   width: 1px;
+}
+
+.about__container {
+  padding-bottom: 60px;
+}
+
+.about__container p {
+  max-width: 35%;
+  margin-left: 40px;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.about__container .title {
+  font-size: 3rem;
+}
+
+.about__container .title span {
+  color: #1eb43e;
 }
 
 .price__title-head {
@@ -1614,6 +1645,67 @@ template {
 
 .gallery li img {
   border-radius: 15px;
+}
+
+.cert {
+  padding-bottom: 60px;
+}
+
+.cert__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.cert .title {
+  font-size: 3rem;
+}
+
+.cert .sub-title {
+  margin-bottom: 30px;
+}
+
+.cert__text {
+  width: 40%;
+}
+
+.cert__img img {
+  margin-left: 60px;
+  width: 500px;
+}
+
+.cert__btn {
+  border-radius: 8px;
+  border: 2px solid #c7a081;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.cert__btn:hover {
+  background-color: #c7a081;
+  color: #fff;
 }
 
 .contacts {
@@ -2304,6 +2396,17 @@ template {
     top: 15px;
   }
 
+  .cert__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .cert__text {
+    width: 100%;
+  }
+
   .contacts__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2449,6 +2552,11 @@ template {
     margin-right: 0;
   }
 
+  .cert__img img {
+    margin-left: 0;
+    width: 350px;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     width: 50px;
@@ -2553,6 +2661,15 @@ template {
 
   .price .container {
     padding: 0 7px;
+  }
+
+  .cert__text .price__price {
+    font-size: 1.2rem;
+  }
+
+  .cert__img img {
+    margin-top: 30px;
+    width: 300px;
   }
 
   .footer .footer__menu {
