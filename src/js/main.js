@@ -8,7 +8,7 @@ import { countNumbers } from './components/countNumbers'
 import { popupRegister } from './components/popupRegister'
 import { sendData } from './components/form'
 import { inputMask } from './components/inputMask'
-import { interiorSlider } from './components/sliders'
+import { sliders } from './components/sliders'
 import { showPriceInfo } from './components/showPriceInfo'
 import { loadYandeMap } from './components/yMap'
 
@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollHeader()
   popupRegister()
   sendData()
-  interiorSlider()
+  sliders()
   showPriceInfo()
   loadYandeMap()
+})
 
-  window.addEventListener('load', () => {
-    document.querySelector('.preloader').classList.add('preloader_hidden')
-  })
+window.addEventListener('load', () => {
+  document.querySelector('.preloader').classList.add('preloader_hidden')
 })

@@ -1,6 +1,6 @@
 import Swiper, { Navigation } from 'swiper'
 
-export function interiorSlider() {
+export function sliders() {
   const swiper = new Swiper('.interior__slider', {
     modules: [Navigation],
     direction: 'horizontal',
@@ -34,6 +34,31 @@ export function interiorSlider() {
       1200: {
         slidesPerView: 4,
         spaceBetween: 20,
+        autoplay: false,
+        loop: false,
+      },
+    },
+  })
+
+  const welcome = new Swiper('.meeting__slider', {
+    direction: 'horizontal',
+    spaceBetween: 10,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.8,
+      },
+      480: {
+        slidesPerView: 2.2,
+      },
+      680: {
+        slidesPerView: 3.7,
+      },
+      850: {
+        slidesPerView: 5.2,
+      },
+      900: {
+        slidesPerView: 6,
         autoplay: false,
         loop: false,
       },
